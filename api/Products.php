@@ -26,6 +26,10 @@ class Products
         if ($_GET['controller'] == 'getProductsByCategory') {
             $this->getProductsByCategory();
         }
+
+        if ($_GET['controller'] == 'getProductsByRating') {
+            $this->getProductsByRating();
+        }
     }
 
     /**
@@ -43,6 +47,15 @@ class Products
     public function getProductsByCategory()
     {
         $select_subject = "SELECT * FROM product_table where category_id = ".$_GET['category_id'];
+        $this->bindQueryToData($select_subject);
+    }
+
+    /**
+     * Return all products where rating equal 1
+     */
+    public function getProductsByRating()
+    {
+        $select_subject = "SELECT * FROM product_table where rating = 1 AND category_id = ".$_GET['category_id'];
         $this->bindQueryToData($select_subject);
     }
 
