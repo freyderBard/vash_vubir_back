@@ -55,7 +55,7 @@ class Products
      */
     public function getProductsByRating()
     {
-        $select_subject = "SELECT * FROM product_table where rating = 1 AND category_id = ".$_GET['category_id'];
+        $select_subject = "SELECT * FROM product_table where rating = 1";
         $this->bindQueryToData($select_subject);
     }
 
