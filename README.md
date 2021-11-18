@@ -1,5 +1,7 @@
 # vash_vubir_back
 
+// BASE_URL - http://vash-vybir.lutsk.ua/back/api
+
 // Get smallest price 
 
 http://back/api/Category.php?controller=getSmallestPriceByCategory&category_id=2
